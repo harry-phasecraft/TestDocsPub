@@ -22,4 +22,4 @@ build:
   commands:
     # - pip install pdoc
     # - pdoc ./python/doctester -o $READTHEDOCS_OUTPUT/html
-    - cp -r ./rtd_test/docs/build/ $READTHEDOCS_OUTPUT/html
+    - cp -r ./rtd_test/docs/build/* $READTHEDOCS_OUTPUT/html
