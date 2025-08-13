@@ -12,4 +12,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: julia_docs
-          path: rtd_output/html
+          path: rtd_output/html/
