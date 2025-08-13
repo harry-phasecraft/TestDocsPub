@@ -22,5 +22,6 @@ build:
   commands:
     # - pip install pdoc
     # - pdoc ./python/doctester -o $READTHEDOCS_OUTPUT/html
+    - pip install requests
     - mkdir --parents $READTHEDOCS_OUTPUT/html/
-    - cp -r ./rtd_test/docs/build/* $READTHEDOCS_OUTPUT/html
+    - python rtds_artifact.py harry-phasecraft/TestDocsPub $GITHUB_PAT_ARTIFACTS julia_docs $READTHEDOCS_OUTPUT/html
