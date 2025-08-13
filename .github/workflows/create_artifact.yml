@@ -8,9 +8,13 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: List files
+        run: |
+          pwd
+          ls -R rtd_output || echo "No rtd_output directory"
+          ll
       - name: Archive the docs
         uses: actions/upload-artifact@v4
         with:
           name: julia_docs
-          working-directory: .
           path: rtd_output/html
