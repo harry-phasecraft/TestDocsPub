@@ -1,0 +1,16 @@
+name: Create artifact
+
+on: [push]
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Archive the docs
+        uses: actions/upload-artifact@v4
+        with:
+          name: julia_docs
+          working-directory: .
+          path: rtd_output/html
