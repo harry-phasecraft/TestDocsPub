@@ -11,7 +11,7 @@ jobs:
       - name: List files
         run: |
           pwd
-          ll
+          ls -l
           ls -R rtd_output || echo "No rtd_output directory"
       - name: Archive the docs
         uses: actions/upload-artifact@v4
